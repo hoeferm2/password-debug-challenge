@@ -18,14 +18,8 @@ var generateBtn = document.querySelector("#generate");
 
 
 
-function randomizePassword() {
-  var passwordResult = ''
 
-  for (var i = 0; i < passwordLength; i++) {
-    passwordResult += finalChoice.charAT(Math.floor(Math.random() * passwordLength));
-    console.log(randomizePassword);
-  }
-}
+
 
 function generatePassword() {
 
@@ -35,10 +29,16 @@ function generatePassword() {
   var finalChoice = numberChoice + lowerChoice + upperChoice + specialChoice;
 
   var lengthChoice = parseInt(window.prompt("How long is you password? It must be 8-128 characters long"));
-  if (lengthChoice < 8) ||
-    (lengthChoice > 128) {
+  console.log(lengthChoice);
+  /* if isNan(lengthChoice) {
+    return "Not a number";
+    alert("Sorry, it has to be a number");
+  }
+*/
+  if (lengthChoice < 8 ||
+    lengthChoice > 128) {
     alert("Sorry, it has to be between 8-128 characters");
-    location.reload;
+    generatePassword();
   } else {
     passwordLength = lengthChoice;
     console.log(passwordLength);
@@ -79,12 +79,18 @@ function generatePassword() {
     console.log("NumberNO")
     numberChoice = ""
   }
-
-  //empty string value is OK!
-
+  //empty string value is OK
   console.log(finalChoice);
 
+  function randomizePassword() {
+    var passwordResult = ''
 
+    for (var i = 0; i < passwordLength; i++) {
+      passwordResult += finalChoice.charAT(Math.floor(Math.random() * passwordLength));
+      console.log(randomizePassword);
+    }
+  }
+  passwordResult = generatePassword
 }
 
 
