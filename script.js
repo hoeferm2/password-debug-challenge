@@ -4,7 +4,7 @@
 var lowercase = "abcdefghijklmnopqurstuwxyz";
 var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var specialCharacters = "@#$%^&*";
-var numbers = ""
+var numbers = "1234567890"
 // password length variable 
 var passwordLength = 0
 
@@ -26,7 +26,7 @@ function generatePassword() {
   console.log("Hey you clicked it");
   // Clicking the button has worked. 
   // There is no value being generated.
-  var finalChoice = numberChoice + lowerChoice + upperChoice + specialChoice;
+
 
   var lengthChoice = parseInt(window.prompt("How long is you password? It must be 8-128 characters long"));
   console.log(lengthChoice);
@@ -79,18 +79,17 @@ function generatePassword() {
     console.log("NumberNO")
     numberChoice = ""
   }
-  //empty string value is OK
+  var finalChoice = numberChoice + lowerChoice + upperChoice + specialChoice;
   console.log(finalChoice);
 
-  function randomizePassword() {
-    var passwordResult = ''
 
-    for (var i = 0; i < passwordLength; i++) {
-      passwordResult += finalChoice.charAT(Math.floor(Math.random() * passwordLength));
-      console.log(randomizePassword);
-    }
+  var passwordResult = ''
+
+  for (var i = 0; i < passwordLength; i++) {
+    passwordResult += finalChoice.charAt(Math.floor(Math.random() * finalChoice.length));
   }
-  passwordResult = generatePassword
+
+  return passwordResult
 }
 
 
