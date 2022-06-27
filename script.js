@@ -4,9 +4,12 @@
 var lowercase = "abcdefghijklmnopqurstuwxyz";
 var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var specialCharacters = "@#$%^&*";
-var numbers = "1234567890";
+var numbers = ""
 // password length variable 
 var passwordLength
+
+
+
 
 var generateBtn = document.querySelector("#generate");
 // the generateBtn Variable is the part of the document with the generate ID
@@ -75,6 +78,10 @@ function generatePassword() {
   // Clicking the button has worked. 
   // There is no value being generated.
   var finalChoice = numberChoice + lowerChoice + upperChoice + specialChoice;
+
+  console.log(finalChoice);
+
+  generatePassword() = finalChoice
 
 
 
