@@ -8,18 +8,9 @@ var numbers = "1234567890"
 // password length variable 
 var passwordLength = 0
 
-
-
-
 var generateBtn = document.querySelector("#generate");
 // the generateBtn Variable is the part of the document with the generate ID
 // in this case that is the button that say "Generate password"
-
-
-
-
-
-
 
 function generatePassword() {
 
